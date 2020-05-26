@@ -40,3 +40,5 @@ RoxygenNote: 7.0.2
 LinkingTo: 
     Rcpp,
     RcppArmadillo
+URL: https://github.com/jennasimit/flashfm
+BugReports: https://github.com/jennasimit/flashfm/issues
