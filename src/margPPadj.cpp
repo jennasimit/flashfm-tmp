@@ -296,7 +296,7 @@ double calcQD4(int mod1, int N,
 	NumericMatrix K2 = keep[1]; // keep is in order and on log scale
 	NumericMatrix K3 = keep[2];
 	
-	double d12, ddd,nn;
+	double ddd,nn;
 
 	NumericVector dd(2);
 	double val;
@@ -323,7 +323,7 @@ double calcQD4(int mod1, int N,
 	
 	// calculate d12 adjustment term between all pairs			
 		if(Nsame>0) {
-		d12=0;		
+				
 		for(int l=0; l<np ; ++l) {
 			Tt1 = c2(0,l);
 			Tt2 = c2(1,l);
@@ -512,7 +512,7 @@ double calcQD5(int mod1, int N,
 			int mod1 = imods(Tt1);
 			int mod2 = imods(Tt2);
 			NumericVector tmp = indices(M);
-			NumericVector notT12 = tmp[ tmp != Tt1 & tmp != Tt2];
+			NumericVector notT12 = tmp[ (tmp != Tt1) & (tmp != Tt2)];
 			int nTt1 = notT12(0);
 			int nTt2 = notT12(1);
 			int nTt3 = notT12(2);
